@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
         "/about": (context) => AboutPage(),
         "/contact": (context) => Contactpage(),
       },
+      debugShowCheckedModeBanner: false,
     );
   }
 }
