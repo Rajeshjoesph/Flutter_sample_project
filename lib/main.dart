@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       routes: {
         "/": (context) => HomePage(),
         "/about": (context) => AboutPage(),
-        "/contact": (context) => Contactpage(),
+        "/contact": (context) => UserFormPage(),
       },
       debugShowCheckedModeBanner: false,
     );
