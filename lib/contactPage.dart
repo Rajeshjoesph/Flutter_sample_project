@@ -76,7 +76,7 @@ class _UserFormPageState extends State<UserFormPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: buildCustomAppBar(context),
+        // appBar: buildCustomAppBar(context),
         body: Padding(
             padding: const EdgeInsets.all(16.6),
             child: Column(

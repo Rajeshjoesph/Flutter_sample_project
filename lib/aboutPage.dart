@@ -6,7 +6,7 @@ class AboutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildCustomAppBar(context),
+      // appBar: TopBar(),
       body: FutureBuilder<List<dynamic>>(
           future: jsonData(),
           builder: (context, snapshot) {

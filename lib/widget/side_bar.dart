@@ -6,9 +6,10 @@ import 'package:flutter/widgets.dart';
 class SideBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Drawer(
-        child: Container(
-      color: const Color(0xFF171821),
+    return Container(
+      width: 250,
+      padding: EdgeInsets.all(10),
+      color: Color(0xFF2A2B37),
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
@@ -22,6 +23,7 @@ class SideBar extends StatelessWidget {
           //         fontSize: 24,
           //       )),
           // ),
+          SizedBox(height: 20),
           ListTile(
             leading: const Icon(Icons.home),
             title: Text(
@@ -35,6 +37,7 @@ class SideBar extends StatelessWidget {
               Navigator.pushReplacementNamed(context, '/');
             },
           ),
+          SizedBox(height: 10),
           ListTile(
             leading: Icon(Icons.person),
             title: Text("Profile",
@@ -46,6 +49,7 @@ class SideBar extends StatelessWidget {
               Navigator.pushReplacementNamed(context, '/about'),
             },
           ),
+          SizedBox(height: 10),
           ListTile(
             leading: Icon(Icons.shopping_cart_outlined),
             title: Text("Orders",
@@ -57,6 +61,7 @@ class SideBar extends StatelessWidget {
               Navigator.pushReplacementNamed(context, '/contact'),
             },
           ),
+          SizedBox(height: 10),
           ListTile(
             leading: Icon(Icons.shopping_bag_outlined),
             title: Text(
@@ -70,6 +75,7 @@ class SideBar extends StatelessWidget {
               // Add your settings navigation logic here
             },
           ),
+          SizedBox(height: 10),
           ListTile(
             leading: Icon(Icons.stacked_line_chart_sharp),
             title: Text(
@@ -83,6 +89,7 @@ class SideBar extends StatelessWidget {
               // Add your settings navigation logic here
             },
           ),
+          SizedBox(height: 10),
           ListTile(
             leading: Icon(Icons.message_outlined),
             title: Text(
@@ -96,6 +103,7 @@ class SideBar extends StatelessWidget {
               // Add your settings navigation logic here
             },
           ),
+          SizedBox(height: 10),
           ListTile(
             leading: Icon(Icons.settings_outlined),
             title: Text(
@@ -109,6 +117,7 @@ class SideBar extends StatelessWidget {
               // Add your logout logic here
             },
           ),
+          SizedBox(height: 10),
           ListTile(
             leading: Icon(Icons.star_border_outlined),
             title: Text(
@@ -122,6 +131,7 @@ class SideBar extends StatelessWidget {
               // Add your logout logic here
             },
           ),
+          SizedBox(height: 10),
           ListTile(
             leading: Icon(Icons.history_sharp),
             title: Text(
@@ -135,6 +145,7 @@ class SideBar extends StatelessWidget {
               // Add your logout logic here
             },
           ),
+          SizedBox(height: 10),
           ListTile(
             leading: Icon(Icons.logout),
             title: Text(
@@ -150,6 +161,6 @@ class SideBar extends StatelessWidget {
           )
         ],
       ),
-    ));
+    );
   }
 }

@@ -1,63 +1,51 @@
 import 'package:flutter/material.dart';
 
-PreferredSizeWidget buildCustomAppBar(BuildContext context) {
-  return AppBar(
-    title: Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(
-          "Rajesh",
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        Row(
-          children: [
-            NavItem(
-              title: "Home",
-              routeName: '/',
-            ),
-            SizedBox(width: 46),
-            NavItem(
-              title: "About",
-              routeName: '/about',
-            ),
-            SizedBox(width: 36),
-            NavItem(
-              title: "Content",
-              routeName: '/contact',
-            )
-          ],
-        )
-      ],
-    ),
-    centerTitle: true,
-    backgroundColor: Colors.teal,
-  );
-}
-
-class NavItem extends StatelessWidget {
-  final String title;
-  final String routeName;
-
-  NavItem({required this.title, required this.routeName});
-
+class TopBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-        onTap: () {
-          if (ModalRoute.of(context)?.settings.name != routeName) {
-            Navigator.pushReplacementNamed(context, routeName);
-          }
-        },
-        child: Text(
-          title,
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 16,
-          ),
-        ));
+    return AppBar(
+      backgroundColor: const Color(0xFF171821),
+      title: SizedBox(
+          width: 700,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Expanded(
+                  child: Container(
+                      height: 40,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF2A2B37),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      padding: EdgeInsets.symmetric(horizontal: 10),
+                      child: TextField(
+                        decoration: InputDecoration(
+                            hintText: "Search here...",
+                            hintStyle: TextStyle(
+                                color: Color(0xFFD3D3D9), fontSize: 14),
+                            border: InputBorder.none,
+                            icon: Icon(Icons.search, color: Color(0xFFD3D3D9))),
+                      ))),
+            ],
+          )),
+      actions: [
+        IconButton(
+          icon: Icon(Icons.notifications, color: Color(0xFFD3D3D9)),
+          onPressed: () {
+            // Handle notifications
+          },
+        ),
+        IconButton(
+          icon: Icon(Icons.account_circle, color: Color(0xFFD3D3D9)),
+          onPressed: () {
+            // Handle user profile
+          },
+        ),
+        IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.expand_more),
+            color: Color(0xFFD3D3D9)),
+      ],
+    );
   }
 }
