@@ -35,11 +35,8 @@ class TopBar extends StatelessWidget {
             // Handle notifications
           },
         ),
-        IconButton(
-          icon: Icon(Icons.account_circle, color: Color(0xFFD3D3D9)),
-          onPressed: () {
-            // Handle user profile
-          },
+        CircleAvatar(
+          backgroundImage: AssetImage("assets/profile.jpg"), // user profile
         ),
         IconButton(
             onPressed: () {},

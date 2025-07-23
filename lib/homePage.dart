@@ -1,18 +1,36 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'navbar.dart';
 import 'widget/side_bar.dart';
+import 'widget/today_sales.dart';
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Row(children: [
-        SideBar(),
-        Expanded(
-          child: TopBar(),
-        )
-      ]),
+      body: Row(
+        children: [
+          // Sidebar
+          SideBar(),
+
+          // Main content area
+          Expanded(
+            child: Column(
+              children: [
+                // TopBar at the top
+                SizedBox(
+                  height: 60,
+                  child: TopBar(),
+                ),
+
+                // Today's Sales or main content
+                Expanded(
+                  child: TodaySales(),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
