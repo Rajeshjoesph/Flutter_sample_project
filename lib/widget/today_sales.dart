@@ -17,7 +17,7 @@ class TodaySales extends StatelessWidget {
             children: [
               Container(
                   width: 800,
-                  height: 400,
+                  height: 260,
                   padding: EdgeInsets.all(18.0),
                   decoration: BoxDecoration(
                     color: Color(0xFF2A2B37), // Card background color
@@ -27,19 +27,26 @@ class TodaySales extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        'Today\'s Sales',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      Text(
-                        'Sales Summary',
-                        style: TextStyle(
-                          color: Colors.white70,
-                          fontSize: 14,
+                      Padding(
+                        padding: EdgeInsets.all(5),
+                        child: Column(
+                          children: [
+                            Text(
+                              'Today\'s Sales',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Text(
+                              'Sales Summary',
+                              style: TextStyle(
+                                color: Colors.white70,
+                                fontSize: 14,
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                       Row(
@@ -194,18 +201,17 @@ class TodaySales extends StatelessWidget {
                       ),
                     ],
                   )),
+              Container(
+                width: 200,
+                height: 260,
+                child: Text(
+                  'Total Sales: \$ 5K\n+10% from yesterday',
+                ),
+              )
             ],
           ),
 
-          SizedBox(height: 16),
           // Placeholder for sales data
-          Expanded(
-            child: Row(children: [
-              Text('Total Sales: \$5000', style: TextStyle(fontSize: 18)),
-              Text('Number of Transactions: 150',
-                  style: TextStyle(fontSize: 18)),
-            ]),
-          ),
         ],
       ),
     );
