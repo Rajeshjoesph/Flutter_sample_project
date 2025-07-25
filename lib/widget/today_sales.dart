@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'bar_chart.dart';
 
 class TodaySales extends StatelessWidget {
   @override
@@ -14,9 +15,10 @@ class TodaySales extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                  width: 800,
+                  width: 850,
                   height: 260,
                   padding: EdgeInsets.all(18.0),
                   decoration: BoxDecoration(
@@ -202,12 +204,70 @@ class TodaySales extends StatelessWidget {
                     ],
                   )),
               Container(
-                width: 200,
-                height: 260,
-                child: Text(
-                  'Total Sales: \$ 5K\n+10% from yesterday',
-                ),
-              )
+                  width: 350,
+                  height: 260,
+                  decoration: BoxDecoration(
+                    color: Color(0xFF2A2B37), // Card background color
+                    borderRadius: BorderRadius.circular(8.0),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                          padding: EdgeInsets.all(18.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Level',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              SizedBox(
+                                  height: 150,
+                                  child: Padding(
+                                      padding: EdgeInsets.all(15),
+                                      child: CustomBarChart())),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Container(
+                                    height: 15,
+                                    width: 15,
+                                    decoration: BoxDecoration(
+                                      color: Colors.cyanAccent, // Card background color
+                                      borderRadius: BorderRadius.circular(8.0),
+                                    ),
+                                  ),
+                                  Text(
+                                    "Volume",
+                                    style: TextStyle(
+                                        fontSize: 20, color: Color(0xFF615F5F)),
+                                  ),
+                                  Text("|",
+                                      style: TextStyle(
+                                          fontSize: 20, color: Colors.white)),
+                                  Container(
+                                    height: 15,
+                                    width: 15,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xFF545252), // Card background color
+                                      borderRadius: BorderRadius.circular(8.0),
+                                    ),
+                                  ),
+                                  Text("Services",
+                                      style: TextStyle(
+                                          fontSize: 20, color: const Color(0xFF615F5F))),
+                                ],
+                              )
+                            ],
+                          ))
+                    ],
+                  ))
             ],
           ),
 
