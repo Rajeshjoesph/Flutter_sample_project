@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'navbar.dart';
 import 'widget/side_bar.dart';
 import 'widget/today_sales.dart';
+import 'widget/top_products.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -26,6 +27,7 @@ class HomePage extends StatelessWidget {
                 Expanded(
                   child: TodaySales(),
                 ),
+                Expanded(child: TopProducts())
               ],
             ),
           ),

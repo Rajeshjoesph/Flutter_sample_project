@@ -239,7 +239,8 @@ class TodaySales extends StatelessWidget {
                                     height: 15,
                                     width: 15,
                                     decoration: BoxDecoration(
-                                      color: Colors.cyanAccent, // Card background color
+                                      color: Colors
+                                          .cyanAccent, // Card background color
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                   ),
@@ -255,13 +256,15 @@ class TodaySales extends StatelessWidget {
                                     height: 15,
                                     width: 15,
                                     decoration: BoxDecoration(
-                                      color: Color(0xFF545252), // Card background color
+                                      color: Color(
+                                          0xFF545252), // Card background color
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                   ),
                                   Text("Services",
                                       style: TextStyle(
-                                          fontSize: 20, color: const Color(0xFF615F5F))),
+                                          fontSize: 20,
+                                          color: const Color(0xFF615F5F))),
                                 ],
                               )
                             ],
