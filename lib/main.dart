@@ -9,6 +9,7 @@ import 'homePage.dart';
 import 'aboutPage.dart';
 import 'contactPage.dart';
 import 'navbar.dart';
+import 'widget/signUp_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         "/": (context) => HomePage(),
         "/about": (context) => AboutPage(),
         "/contact": (context) => UserFormPage(),
+        "/SiginUpPage": (context) => SiginUpPage()
       },
       debugShowCheckedModeBanner: false,
     );

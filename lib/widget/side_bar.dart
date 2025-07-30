@@ -58,7 +58,7 @@ class SideBar extends StatelessWidget {
                   fontSize: 18,
                 )),
             onTap: () => {
-              Navigator.pushReplacementNamed(context, '/contact'),
+              Navigator.pushNamed(context, '/contact'),
             },
           ),
           SizedBox(height: 10),
@@ -86,6 +86,7 @@ class SideBar extends StatelessWidget {
               ),
             ),
             onTap: () => {
+              Navigator.pushNamed(context, '/SiginUpPage')
               // Add your settings navigation logic here
             },
           ),
